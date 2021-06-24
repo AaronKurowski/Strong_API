@@ -13,9 +13,11 @@ namespace StrongAPI.Data
 
         }
         public DbSet<Gear> Gear { get; set; }
+        public DbSet<ShowListing> ShowListings { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
+            modelBuilder.Entity<GearBag>().HasKey(GB => new { GB.UserId, GB.GearId });
             base.OnModelCreating(modelBuilder);
 
             modelBuilder.ApplyConfiguration(new RolesConfiguration());
