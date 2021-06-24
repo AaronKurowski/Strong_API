@@ -14,6 +14,7 @@ namespace StrongAPI.Data
         }
         public DbSet<Gear> Gear { get; set; }
         public DbSet<ShowListing> ShowListings { get; set; }
+        public DbSet<GearBag> GearBags { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
