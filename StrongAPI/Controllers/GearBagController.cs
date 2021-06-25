@@ -19,7 +19,7 @@ namespace StrongAPI.Controllers
             _context = context;
         }
 
-        //get all items for user
+        // get all items for a user
         [HttpGet("{userId}")]
         public IActionResult Get(string userId)
         {
@@ -28,6 +28,7 @@ namespace StrongAPI.Controllers
             return Ok(items);
         }
 
+        // posts an item to the gearbag for a specific user
         [HttpPost("{userId}")]
         public IActionResult Post(string userId, [FromBody] GearBag value)
         {
@@ -37,13 +38,21 @@ namespace StrongAPI.Controllers
             return StatusCode(201, value);
         }
 
-        [HttpDelete("{userId}/{productId}")]
+        // delete an item from the gearbag
+        [HttpDelete("{userId}/{gearId}")]
         public IActionResult Delete(string userId, int gearId)
         {
-            var item = _context.GearBags.Where(i => i.UserId == userId && i.GearId == gearId).SingleOrDefault();
-            _context.GearBags.Remove(item);
-            _context.SaveChanges();
-            return StatusCode(204);
+            try
+            {
+                var item = _context.GearBags.Where(i => i.UserId == userId && i.GearId == gearId).SingleOrDefault();
+                _context.GearBags.Remove(item);
+                _context.SaveChanges();
+                return StatusCode(204);
+            }
+            catch
+            {
+                return StatusCode(404);
+            }
         }
     }
 }

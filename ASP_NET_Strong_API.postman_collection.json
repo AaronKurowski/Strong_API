@@ -1,7 +1,7 @@
 {
 	"info": {
 		"_postman_id": "58c6c1ba-75d9-420d-827d-76fa8980bfa3",
-		"name": "ASP_NET_eCommerce_Web_API",
+		"name": "StrongAPI",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
 	},
 	"item": [
@@ -15,7 +15,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"firstname\": \"David\",\r\n    \"lastname\": \"Lagrange\",\r\n    \"username\": \"dlagrange\",\r\n    \"password\": \"somePass12\",\r\n    \"email\": \"david@devcodecamp.com\",\r\n    \"phonenumber\": \"555-555-5555\"\r\n}",
+							"raw": "{\r\n    \"firstname\": \"Aaron\",\r\n    \"lastname\": \"Kurowski\",\r\n    \"username\": \"akurow\",\r\n    \"password\": \"somePass12\",\r\n    \"email\": \"aaron@devcodecamp.com\",\r\n    \"phonenumber\": \"555-555-5555\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"
@@ -44,7 +44,7 @@
 						"header": [],
 						"body": {
 							"mode": "raw",
-							"raw": "{\r\n    \"username\": \"dlagrange\",\r\n    \"password\": \"somePass12\"\r\n}",
+							"raw": "{\r\n    \"username\": \"akurow\",\r\n    \"password\": \"somePass12\"\r\n}",
 							"options": {
 								"raw": {
 									"language": "json"

@@ -15,6 +15,7 @@ namespace StrongAPI.Data
         public DbSet<Gear> Gear { get; set; }
         public DbSet<ShowListing> ShowListings { get; set; }
         public DbSet<GearBag> GearBags { get; set; }
+        public DbSet<Song> Songs { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -23,6 +24,5 @@ namespace StrongAPI.Data
 
             modelBuilder.ApplyConfiguration(new RolesConfiguration());
         }
-
     }
 }
