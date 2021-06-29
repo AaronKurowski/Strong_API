@@ -12,5 +12,8 @@ namespace StrongAPI.DataTransferObjects
         public string Password { get; set; }
         public string Email { get; set; }
         public string PhoneNumber { get; set; }
+        public string Instrument { get; set; }
+        public string Genre { get; set; }
+        public string Band { get; set; }
     }
 }
