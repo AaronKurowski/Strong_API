@@ -19,9 +19,9 @@ namespace StrongAPI.Models
         public string ImageURL { get; set; }
         public string Condition { get; set; }
 
-        [DataType(DataType.Date)]
-        [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
-        public DateTime DateListed { get; set; }
+        //[DataType(DataType.Date)]
+        //[DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]
+        public string DateListed { get; set; }
         public string Location { get; set; }
         public string Contact { get; set; }
     }
