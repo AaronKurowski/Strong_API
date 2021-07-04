@@ -18,6 +18,7 @@ namespace StrongAPI.Models
         public string Album { get; set; }
         public string AudioFile { get; set; }
         public string ImageURL { get; set; }
+        public string Genre { get; set; }
 
         [DataType(DataType.Date)]
         [DisplayFormat(DataFormatString = "{0:yyyy-MM-dd}", ApplyFormatInEditMode = true)]

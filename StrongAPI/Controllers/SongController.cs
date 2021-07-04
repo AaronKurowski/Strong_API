@@ -34,10 +34,10 @@ namespace StrongAPI.Controllers
         }
 
         [HttpGet("{id}")]
-        public IActionResult Get(int id)
+        public IActionResult Get(string id)
         {
-            var song = _context.Songs.Where(s => s.SongId == id).SingleOrDefault();
-            return Ok(song);
+            var songs = _context.Songs.Where(s => s.UserId == id);
+            return Ok(songs);
         }
 
         [HttpDelete("{id}")]
