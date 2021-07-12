@@ -41,5 +41,16 @@ namespace StrongAPI.Controllers
             var gear = _context.Gear.Where(g => g.UserId == id);
             return Ok(gear);
         }
+
+        [HttpPut("{id}")]
+        public IActionResult Put(int id, [FromBody] Gear value)
+        {
+            var gear = _context.Gear.Where(g => g.GearId == id).SingleOrDefault();
+            gear.BuyerId = value.BuyerId;
+
+            _context.SaveChanges();
+
+            return Ok(gear);
+        }
     }
 }

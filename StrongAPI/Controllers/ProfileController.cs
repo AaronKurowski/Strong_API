@@ -36,13 +36,14 @@ namespace StrongAPI.Controllers
         [HttpPut("{id}")]
         public IActionResult Put(string id, [FromBody]User value)
         {
-            var user = _context.Users.Where(u => u.Id == id).SingleOrDefault();
+            var user = _context.Users.Where(u => u.Id == id).FirstOrDefault();
             user.FirstName = value.FirstName;
             user.LastName = value.LastName;
             user.Instrument = value.Instrument;
             user.Genre = value.Genre;
             user.Band = value.Band;
             user.Email = value.Email;
+            user.ImageURL = value.ImageURL;
 
             _context.SaveChanges();
 

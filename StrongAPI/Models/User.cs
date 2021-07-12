@@ -10,6 +10,7 @@ namespace StrongAPI.Models
         public string Instrument { get; set; }
         public string Genre { get; set; }
         public string Band { get; set; }
+        public string ImageURL { get; set; }
         //public virtual ICollection<Gear> Gear { get; set; }
         //public virtual ICollection<Song> Songs { get; set; }
     }

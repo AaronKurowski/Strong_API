@@ -24,5 +24,7 @@ namespace StrongAPI.Models
         public string DateListed { get; set; }
         public string Location { get; set; }
         public string Contact { get; set; }
+        [ForeignKey("BuyerId")]
+        public string BuyerId { get; set; }
     }
 }

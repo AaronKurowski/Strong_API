@@ -15,5 +15,6 @@ namespace StrongAPI.DataTransferObjects
         public string Instrument { get; set; }
         public string Genre { get; set; }
         public string Band { get; set; }
+        public string ImageURL { get; set; }
     }
 }

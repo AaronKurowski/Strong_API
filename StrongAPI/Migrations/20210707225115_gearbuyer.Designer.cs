@@ -3,15 +3,17 @@ using System;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 using StrongAPI.Data;
 
 namespace StrongAPI.Migrations
 {
     [DbContext(typeof(ApplicationDbContext))]
-    partial class ApplicationDbContextModelSnapshot : ModelSnapshot
+    [Migration("20210707225115_gearbuyer")]
+    partial class gearbuyer
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -48,15 +50,15 @@ namespace StrongAPI.Migrations
                     b.HasData(
                         new
                         {
-                            Id = "ad08c641-4dad-420b-b1cd-0475f89a6d96",
-                            ConcurrencyStamp = "5a8b6a2c-caef-4add-8a9c-814dc8d4a1b0",
+                            Id = "8c28d685-78b1-45af-b430-53c09a0dec8f",
+                            ConcurrencyStamp = "bad40afd-e6c1-4b1c-b9e0-6214e902c290",
                             Name = "User",
                             NormalizedName = "USER"
                         },
                         new
                         {
-                            Id = "80ff0223-edbf-4d24-b7f4-6bd15b7f74ea",
-                            ConcurrencyStamp = "627dd9e8-c1ba-4a69-bd51-dc0aed0406df",
+                            Id = "4bf952db-b9ad-4b75-8724-da958c6aa2eb",
+                            ConcurrencyStamp = "86765a90-46f1-4e3b-a0d8-2f97620b9f46",
                             Name = "Admin",
                             NormalizedName = "ADMIN"
                         });
@@ -330,9 +332,6 @@ namespace StrongAPI.Migrations
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Genre")
-                        .HasColumnType("nvarchar(max)");
-
-                    b.Property<string>("ImageURL")
                         .HasColumnType("nvarchar(max)");
 
                     b.Property<string>("Instrument")
