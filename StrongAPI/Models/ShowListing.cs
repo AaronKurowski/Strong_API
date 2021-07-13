@@ -18,5 +18,6 @@ namespace StrongAPI.Models
         public int EntryFee { get; set; }
         public string ImageURL { get; set; }
         public DateTime Date { get; set; }
+        public string Location { get; set; }
     }
 }
